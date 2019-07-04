@@ -316,7 +316,285 @@ html {
           box-sizing: inherit; }
 
 body {
-  color: #F9C802;
-  background: #2D2241; }
+  background: #fefefe;
+  margin: 0;
+  overflow-y: scroll;
+  background: -webkit-gradient(linear, left top, left bottom, from(crimson), color-stop(50%, rgba(233, 158, 135, 0.855)), to(white)) no-repeat;
+  background: -webkit-linear-gradient(top, crimson 0%, rgba(233, 158, 135, 0.855) 50%, white 100%) no-repeat;
+  background: -o-linear-gradient(top, crimson 0%, rgba(233, 158, 135, 0.855) 50%, white 100%) no-repeat;
+  background: linear-gradient(180deg, crimson 0%, rgba(233, 158, 135, 0.855) 50%, white 100%) no-repeat;
+  min-height: 100vh; }
+
+.main {
+  padding: 50px 8px 0 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 80vh; }
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header; }
+
+.main-header {
+  background: rgba(220, 20, 60, 0.89);
+  position: fixed;
+  width: 100%;
+  min-height: 52px; }
+
+.navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0; }
+
+.navbar__item {
+  list-style: none;
+  line-height: 52px;
+  text-align: center; }
+  @media (max-width: 700px) {
+    .navbar__item {
+      width: 100%; } }
+
+.navbar__item:hover {
+  background: darkred; }
+
+.navbar__link {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 16px 8px; }
+  .navbar__link:hover {
+    color: white; }
+  @media (max-width: 700px) {
+    .navbar__link {
+      margin: 16px 50px; } }
+
+.header__heading {
+  color: #022f40;
+  margin-bottom: 48px; }
+
+.header__heading--black {
+  color: black;
+  background: hotpink; }
+
+.diary__header--big {
+  color: #0090c1; }
+
+.day__header {
+  color: #1c5d6d;
+  margin-bottom: 8px; }
+
+.day__paragraph {
+  border: 3px solid #216b62;
+  border-radius: 5px;
+  padding: 8px; }
+
+.about {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: about; }
+
+.about__image {
+  float: left;
+  clear: both;
+  max-width: 100px;
+  width: 100%;
+  display: block;
+  margin: 0 16px 16px 0; }
+
+.about__paragraph {
+  overflow: auto;
+  display: block;
+  border: 3px solid #216b62;
+  border-radius: 5px;
+  padding: 8px;
+  min-width: 200px; }
+
+.diary {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  clear: both;
+  grid-area: content; }
+
+.choice__span {
+  display: block; }
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.game__rock {
+  margin: 5px; }
+  .game__rock img {
+    width: 120px;
+    cursor: pointer; }
+
+.game__paper {
+  margin: 5px; }
+  .game__paper img {
+    width: 120px;
+    cursor: pointer; }
+
+.game__scissors {
+  margin: 5px; }
+  .game__scissors img {
+    width: 120px;
+    cursor: pointer; }
+
+.obrazek {
+  background-image: url("../assets/img/htf.png");
+  width: 200px;
+  background-position: center center;
+  margin: 8px;
+  border-radius: 8px;
+  background-size: cover; }
+
+.hobby_list {
+  list-style: circle; }
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple; }
+
+thead th {
+  text-align: center; }
+
+thead th:nth-child(1) {
+  width: 10%; }
+
+thead th:nth-child(2) {
+  width: auto; }
+
+thead th:nth-child(3) {
+  width: 10%; }
+
+th,
+td {
+  padding: 20px;
+  border: 1px solid purple; }
+
+td:nth-child(1),
+td:nth-child(3) {
+  text-align: center; }
+
+.page__grid {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header" "about content";
+  -ms-grid-columns: 200px 16px 1fr;
+  grid-template-columns: 200px 1fr;
+  -ms-grid-rows: 80px 16px 1fr;
+  grid-template-rows: 80px 1fr;
+  grid-gap: 16px; }
+
+.page__grid__item {
+  background: purple;
+  border-radius: 5px; }
+
+.page__grid__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  text-align: center; }
+
+.page__grid__article {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: content; }
+
+.page__grid__nav {
+  grid-area: menu; }
+
+.page__grid__footer {
+  grid-area: footer; }
+
+.page__grid__element {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 4; }
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 16px; }
+
+@media (min-width: 701px) {
+  .main {
+    max-width: 900px; }
+  .navigation__switcher {
+    display: none; } }
+
+@media (max-width: 700px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; }
+  .navbar__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0; }
+  .navbar__list--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .navigation__switcher {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 1.4em; }
+  .main {
+        grid-template-areas: "header" "content" "about";
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; }
+  .obrazek {
+    display: none; }
+  .main > .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; }
+  .main > .about {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1; }
+  .main > .diary {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; }
+  .main > .page__grid__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; }
+  .main > .page__grid__article {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; } }
 
 /*# sourceMappingURL=main.css.map */
